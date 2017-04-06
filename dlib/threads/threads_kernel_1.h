@@ -52,6 +52,9 @@ namespace dlib
         void lock (
         ) const { EnterCriticalSection(&cs); }
 
+        bool trylock (
+          ) const {  return TryEnterCriticalSection(&cs) == 1; }
+        
         void unlock (
         ) const { LeaveCriticalSection(&cs); }
 

@@ -172,6 +172,9 @@ namespace dlib
                       but now "owns" #*this
         !*/
 
+        bool trylock (
+          ) const;
+
         void unlock (
         ) const;
         /*!
